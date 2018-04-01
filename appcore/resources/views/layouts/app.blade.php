@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -68,10 +69,12 @@
         </nav>
 
         <main class="py-4">
+            <div class="container">
                 @if(Session::has('message'))
                 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
                 @endif
             @yield('content')
+            </div>
         </main>
     </div>
 </body>
