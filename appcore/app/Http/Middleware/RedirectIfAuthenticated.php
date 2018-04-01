@@ -18,6 +18,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
+            Session::flash('message', 'Autheticated!'); 
+            Session::flash('alert-class', 'alert-success'); 
             return redirect('/dashboard');
         }
 
