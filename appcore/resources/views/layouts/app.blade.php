@@ -68,7 +68,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-3">
             <div class="container">
                 @if(Session::has('message'))
                 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
