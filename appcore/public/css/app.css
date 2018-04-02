@@ -9994,6 +9994,12 @@ a.text-dark:focus {
   }
 }
 
+.alert-dismissive {
+  color: #721c24 !important;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

@@ -13,6 +13,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="//code.jquery.com/jquery.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -31,5 +32,15 @@
             </div>
         </main>
     </div>
+  
+    <script>
+       /* $('#alert').fadeOut("slow");
+*/
+$(document).ready(function(){
+  
+    $(".alert").not('.alert-dismissible').fadeIn(3000).delay(3000).fadeOut("slow");
+});
+
+</script>
 </body>
 </html>

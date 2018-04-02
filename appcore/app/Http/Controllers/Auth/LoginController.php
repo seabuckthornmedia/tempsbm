@@ -26,6 +26,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/dashboard';
+    
 
     /**
      * Create a new controller instance.
@@ -36,4 +37,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function authenticated()
+    {
+        return redirect('/dashboard')->with('success', 'Logged in successfully!!');
+    }
+
+
 }
