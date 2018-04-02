@@ -21,6 +21,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+
+     <!-- Set custom sheet passed by session for different content views -->
+    @if(session('style'))
+        <link href="{{session('style')}}.css" rel="stylesheet">
+    @endif
+
 </head>
 <body>
     <div id="app">
@@ -28,19 +35,13 @@
         <main class="py-3">
             <div class="container">
                 @include('include.message')
+                @include('include.carousel')
                 @yield('content')
             </div>
         </main>
+        <aside>@include('include.sidebar')</aside>
+        @include('pages.test')
     </div>
-  
-    <script>
-       /* $('#alert').fadeOut("slow");
-*/
-$(document).ready(function(){
-  
-    $(".alert").not('.alert-dismissible').fadeIn(3000).delay(3000).fadeOut("slow");
-});
-
-</script>
+    @include('include.scripts')
 </body>
 </html>

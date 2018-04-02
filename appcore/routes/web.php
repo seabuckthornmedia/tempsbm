@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/success', 'PagesController@success')->name('success');
+Route::get('/home', 'PagesController@home')->name('home');

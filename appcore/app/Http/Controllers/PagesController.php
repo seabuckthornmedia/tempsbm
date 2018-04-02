@@ -10,12 +10,13 @@ class PagesController extends Controller
     {
         $this->middleware('auth', ['except' => ['welcome', 'success']]);
     }
-    public function success()
+    public function home()
     {
         /* 
             Session::flash('message', 'This is a message!'); 
             Session::flash('alert-class', 'alert-danger'); 
         */
-        return view('pages.dashboard')->with('alert-dismissible', 'success');
+        return view('pages.home')->with('alert-dismissible', 'success');
     }
+
 }
