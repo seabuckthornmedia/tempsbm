@@ -8,7 +8,9 @@ class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
-     *
+     * 
+     *  $this->middleware('auth', ['except' => ['view1', 'view2']]);
+     * 
      * @return void
      */
     public function __construct()

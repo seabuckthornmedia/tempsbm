@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['welcome', 'home']]);
+    }
     public function success()
     {
         Session::flash('message', 'This is a message!'); 
