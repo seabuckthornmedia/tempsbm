@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+let path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,5 +12,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.setPublicPath(`..${path.sep}public_html`);
+
+mix.js('resources/assets/js/app.js', 'js')
+   .sass('resources/assets/sass/app.scss', 'css');

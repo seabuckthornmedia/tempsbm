@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "mix": "0.0.1",
         "scrollreveal": "^3.4.0"
     }
 }
