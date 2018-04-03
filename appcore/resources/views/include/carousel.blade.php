@@ -1,5 +1,5 @@
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide" data-interval="6000" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -7,7 +7,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <img class="first-slide" src="{{ asset('images/265127.jpg')}}" alt="First slide">
                 <div class="container">
                   <div class="carousel-caption text-left">
                     <h1>Example headline.</h1>
@@ -17,7 +17,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+                <img class="second-slide" src="{{ asset('images/265128.jpg')}}" alt="Second slide">
                 <div class="container">
                   <div class="carousel-caption">
                     <h1>Another example headline.</h1>
@@ -27,7 +27,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                <img class="third-slide" src="{{ asset('images/265129.jpg')}}" alt="Third slide">
                 <div class="container">
                   <div class="carousel-caption text-right">
                     <h1>One more for good measure.</h1>
