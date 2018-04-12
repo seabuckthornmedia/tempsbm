@@ -4,9 +4,27 @@
 <script>window.jQuery || document.write('<script src="/appcore/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
+
 <script>
     /* $('#alert').fadeOut("slow"); */
     $(document).ready(function(){
     $(".alert").not('.alert-dismissible').fadeIn(3000).delay(3000).fadeOut("slow");
     });
 </script>
+<script>
+ $(function() {
+   // Smooth Scrolling
+   $('a[href*="#"]:not([href="#"])').click(function() {
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+       var target = $(this.hash);
+       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+       if (target.length) {
+         $('html, body').animate({
+           scrollTop: target.offset().top
+         }, 1000);
+         return false;
+       }
+     }
+   });
+ });
+ </script>

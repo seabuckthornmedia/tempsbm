@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-        
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +11,34 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="//code.jquery.com/jquery.js"></script>
-    <script>
-    // preloader
-            $(window).load(function() {
-                $(".preloader").delay(1000).fadeOut(3000);
-            });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+<script>
+    
+// preloader
+function setDimensions(){
+var windowsHeight = $(window).height();
+$(".preloader").css("height", windowsHeight + "px");
+}
+
+$(window).resize(function() {
+setDimensions();
+});
+
+// Makes sure the whole site is loaded
+$(window).load(function() {
+// Will first fade out the loading animation
+$(".loader").fadeOut("slow");
+// Will fade out the whole DIV that covers the website
+$(".preloader").delay(1000).fadeOut("slow");
+// Will fade out the whole DIV that covers the website
+
+})
+</script>
+    <!-- Scripts -->
+    <script src="js/owl.carousel.min.js"></script>
+ @include('include.startscripts')
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -37,24 +54,35 @@
    
 </head>
 <body>
-   
-    <div id="app">
-        
-        @include('include.preloader')
-      
-        @include('include.nav')
-        <main class="py-3">
-            
-                @include('include.message')
-                @include('include.carousel')
-                <div class="container">
-                @yield('content')
+<div class="preloader">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="loader">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                    </div>
+                </div>
             </div>
+        </div>
+</div>
+    <div id="app">
+        @include('include.nav')
+        <main>
+        @include('include.message')
+            <div class="container">
+            @yield('content')
+            </div>   
         </main>
-        @include('include.testimonial')
-        @include('pages.test')
+        @include('include.getquote')
+        @include('include.footer')
+ 
     </div>
+
     @include('include.scripts')
-  
 </body>
 </html>

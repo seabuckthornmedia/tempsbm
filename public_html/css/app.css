@@ -10261,86 +10261,323 @@ body {
   }
 }
 
-.preloader {
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* display none until init */
+
+.owl-carousel {
   display: none;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+  float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+
+.owl-controls {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* mouse grab icon */
+
+.grabbing {
+  cursor: url(/images/grabbing.png?66f63f272cf0a70b26d5f06b42cabe7c) 8 8, move;
+}
+
+/* fix */
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.preloader {
+  background: rgba(245, 245, 245, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
 }
 
 .loader {
-  width: 210px;
-  height: 210px;
-  margin: 50px auto;
+  position: fixed;
+  width: 20%;
+  /* Set your desired with */
+  z-index: 2;
+  /* Make sure its above other items. */
+  top: 50%;
+  left: 50%;
+  margin-top: -10%;
+  /* Changes with height. */
+  margin-left: -10%;
+  /* Your width divided by 2. */
 }
 
-.loader div {
-  width: 100px;
-  height: 100px;
-  float: left;
-  position: relative;
-  -webkit-animation: 3s linear 0s normal none infinite running loading-1;
-          animation: 3s linear 0s normal none infinite running loading-1;
+#toppage .jumbotron {
+  text-align: left;
+  background-image: url(/images/header.jpg?57dcb542561b49c39c714a13856e794d) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  -webkit-transition: text-indent .4s;
+  transition: text-indent .4s;
+  background-position: right;
+  background-color: white !important;
 }
 
-.loader .box-1 {
-  top: 15px;
-  left: 15px;
-  background: rgba(255, 192, 0, 0.5);
-  border-radius: 0 50% 50%;
-  -webkit-box-shadow: 0 0 15px #ffc000 inset, 0 0 15px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 0 15px #ffc000 inset, 0 0 15px rgba(255, 255, 255, 0.2);
+.jumbotron p {
+  visibility: hidden;
 }
 
-.loader .box-2 {
-  top: 15px;
-  right: 15px;
-  background: rgba(227, 65, 114, 0.5);
-  border-radius: 50% 0 50% 50%;
-  -webkit-box-shadow: 0 0 15px #e34172 inset, 0 0 15px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 0 15px #e34172 inset, 0 0 15px rgba(255, 255, 255, 0.2);
+.jumbotron:hover p {
+  visibility: visible;
 }
 
-.loader .box-3 {
-  bottom: 15px;
-  left: 15px;
-  background: rgba(134, 93, 194, 0.5);
-  border-radius: 50% 50% 50% 0;
-  -webkit-box-shadow: 0 0 15px #865dc2 inset, 0 0 15px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 0 15px #865dc2 inset, 0 0 15px rgba(255, 255, 255, 0.2);
+.sideImg {
+  height: 50%;
+  width: 50%;
 }
 
-.loader .box-4 {
-  bottom: 15px;
-  right: 15px;
-  background: rgba(6, 148, 126, 0.5);
-  border-radius: 50% 50% 0;
-  -webkit-box-shadow: 0 0 15px #06947e inset, 0 0 15px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 0 15px #06947e inset, 0 0 15px rgba(255, 255, 255, 0.2);
+/* CSS used here will be applied after bootstrap.css */
+
+#change {
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+  margin: 20px;
 }
 
-@-webkit-keyframes loading-1 {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+.underlineOver:hover {
+  text-decoration: underline;
+}
+
+#change:hover {
+  opacity: 20;
+  cursor: pointer;
+  filter: none;
+  /* IE6-9 */
+  -webkit-filter: grayscale(0);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+  border-radius: 10px;
+  padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  background-color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 10px;
+  padding: 2px;
+}
+
+footer {
+  background: #373839;
+  color: #9C9C9C;
+}
+
+footer a {
+  color: #BCBCBC;
+}
+
+footer .list-group-item {
+  background: #373839;
+  color: #9C9C9C;
+  font-size: smaller;
+  border-width: 1px 0px 1px;
+  border-top-color: linear-gradient(0deg, #373839 0%, #2c2d2e 50%, #373839 100%);
+  border-bottom-color: #262626;
+  border-style: inset;
+  padding: 3px;
+  margin: 1px 0px 0px 0px;
+}
+
+footer .list-group-title {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(55, 56, 57, 0.099)), color-stop(50%, rgba(44, 45, 46, 0.3)), to(rgba(55, 56, 57, 0.2)));
+  background: linear-gradient(0deg, rgba(55, 56, 57, 0.099) 0%, rgba(44, 45, 46, 0.3) 50%, rgba(55, 56, 57, 0.2) 100%);
+  color: #f5f8fa;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: smaller;
+  border-top: 0px;
+  border-bottom-color: #f5f8fa;
+}
+
+footer .row {
+  padding: 10px;
+}
+
+footer .lastrow {
+  border-bottom: 0px;
+}
+
+footer .col {
+  padding: 3px 3px 3px;
+}
+
+.loader {
+  background: rgba(245, 245, 245, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.loader span {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 9px;
+  height: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-animation: preloader 2s infinite ease-in-out;
+  animation: preloader 2s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+  left: 11px;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+.loader span:nth-child(3) {
+  left: 22px;
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+
+.loader span:nth-child(4) {
+  left: 33px;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+
+.loader span:nth-child(5) {
+  left: 44px;
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+
+.loader span:nth-child(6) {
+  left: 55px;
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+
+@-webkit-keyframes preloader {
+  0% {
+    height: 5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.1);
   }
 
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  25% {
+    height: 30px;
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    background: #f8990c;
+  }
+
+  50%, 100% {
+    height: 5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 
-@keyframes loading-1 {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+@keyframes preloader {
+  0% {
+    height: 5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.1);
   }
 
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  25% {
+    height: 30px;
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    background: #f8990c;
+  }
+
+  50%, 100% {
+    height: 5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 

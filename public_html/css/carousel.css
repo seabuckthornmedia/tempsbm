@@ -15,6 +15,8 @@
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
+  width: 100%;
+ object-fit: contain;
   background-color: #777;
 }
 .carousel-item > img {

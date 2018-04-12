@@ -1,4 +1,5 @@
 
+      <div class="container-fluid">
       <div id="myCarousel" class="carousel slide" data-interval="6000" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -46,7 +47,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-    
+      </div>
     
           <!-- Marketing messaging and featurettes
           ================================================== -->
@@ -75,3 +76,4 @@
                 <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
+          </div>
