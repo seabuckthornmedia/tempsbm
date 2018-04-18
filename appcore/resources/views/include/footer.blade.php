@@ -43,10 +43,10 @@
         <div class="col">
             <ul class="list-group">
                     <li class="list-group-item list-group-title">CONTACT US</li> 
-                    <li class="list-group-item">+91-7820045453</li> 
-                    <li class="list-group-item">info (at) gititsolution.com </li>
-                    <li class="list-group-item">git.solution </li>
-                    <li class="list-group-item lastrow">Hire Me! </li>
+                    <li class="list-group-item">+44 7552 800 886</li> 
+                    <li class="list-group-item">info@seabuckthornmedia.com</li>
+                    <li class="list-group-item">git.solution</li>
+                    <li class="list-group-item lastrow">Hire Me!</li>
             </ul>
             <ul class="list-group">
                     <li class="list-group-item list-group-title">SOCIAL NETWORKS</li> 
@@ -56,24 +56,28 @@
             </ul>
         </div>
     </div>
-    <div id="copyright-container" class="size-wrap">
+    <div id="copyright-container" class="container-fluid">
+            <div class="row">
+                    <div class="col">
         <div id="copyright" >Copyright © 2018 All Rights Reserved <a href="http://www.seabuckthornmedia.com">Sea Buckthorn Media</a></div>
+    </div>
+    <div class="col">
         <div id="footer-menu" class="menu-footer-menu-container">
             <ul id="menu-footer-menu" class="menu">
                 <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-                    <a href="http://www.gititsolution.com/">Home</a>
+                    <a href="http://www.seabuckthornmedia.com">Home</a>
                 </li>
                 <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51">
-                    <a href="http://www.seabuckthornmedia.com">About Us</a>
+                    <a href="#values">Values</a>
                 </li>
                 <li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46">
-                    <a href="http://www.seabuckthornmedia.com">Quote Request</a>
+                    <a href="#quoterequest">Quote Request</a>
                 </li>
                 <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48">
                     <a href="http://www.seabuckthornmedia.com">Privacy Policy</a>
                 </li>
                 <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                    <a href="http://www.seabuckthornmedia.com">Contact Us</a>
+                    <a href="#quoterequest">Contact Us</a>
                 </li>
             </ul>
         </div>

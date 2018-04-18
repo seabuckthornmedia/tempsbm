@@ -56,19 +56,19 @@ $(".preloader").delay(1000).fadeOut("slow");
 <body>
 <div class="preloader">
     <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="loader">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
+    </div>
 </div>
     <div id="app">
         @include('include.nav')
@@ -79,7 +79,7 @@ $(".preloader").delay(1000).fadeOut("slow");
             </div>   
         </main>
         @include('include.getquote')
-        @include('include.footer')
+        @include('include.footer2')
  
     </div>
 

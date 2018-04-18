@@ -3,7 +3,6 @@
     <div class="col-md-12">    
       <div class="align-middle" style="float:left; width:400px; margin-left:20px; margin-right:20px; ">
           <h1>Our Responsibility</h1><br>
-          <p class="lead">If you're unsure, leave it to us.</p>
           <br>
           <p>We believe poor design is responsible for the great damage inflicted upon the natural capital on which all life depends on, including ours and that of our children.</p>
           <p>At Sea Buckthorn Media, this sense of responsibility is reflected on our actions as we extend our passion for design onto the world by designing efficiently our decisions.</p>
