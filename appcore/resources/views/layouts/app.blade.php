@@ -81,8 +81,8 @@ $(".preloader").delay(1000).fadeOut("slow");
             @yield('content')
             </div>   
         </main>
-        @include('include.getquote')
-        @include('include.footer2')
+
+        @include('include.footer')
  
     </div>
 

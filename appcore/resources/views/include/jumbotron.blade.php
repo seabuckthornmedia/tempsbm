@@ -1,8 +1,8 @@
 <div id="toppage">
 <div class="jumbotron">
   <div class="container">
-    <h2 class="display-4">Hello world!</h2>
-    <p class="gbhassle">...goodbye hassle!</p>
+    <h2 class="display-5">Need a website??</h2>
+    <p class="gbhassle">...that's exactly what we do!</p>
     <a class="btn btn-primary btn-lg" href="#features" role="button">Learn more &raquo;</a>
   </div>
 </div>

@@ -6,4 +6,5 @@
     @include('include.oneclick')
     @include('include.values')
     @include('include.pricing')
+    @include('include.getquote')
 @endsection

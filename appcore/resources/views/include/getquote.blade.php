@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron">
         <div class="container">
           <h1 class="display-4">Request a free Quote</h1>
           <p class="lead">We’re a professional bunch, and we want to work with you! Talk to us today to get started.</p>
