@@ -29,10 +29,10 @@ setDimensions();
 // Makes sure the whole site is loaded
 $(window).load(function() {
 // Will first fade out the loading animation
-$(".loader").fadeOut("slow");
+$(".loader").fadeOut(3000);
 // Will fade out the whole DIV that covers the website
 $(".preloader").delay(1000).fadeOut("slow");
-// Will fade out the whole DIV that covers the website
+
 
 })
 </script>
@@ -54,22 +54,25 @@ $(".preloader").delay(1000).fadeOut("slow");
    
 </head>
 <body>
-<div class="preloader">
-    <div class="container">
+            <div class="preloader full-height mx-auto">
+                    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="loader">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+                                        <div class="loader">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+       
+
+
     <div id="app">
         @include('include.nav')
         <main>
