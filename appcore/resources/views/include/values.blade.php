@@ -1,7 +1,7 @@
 <div id="values" class="container"><br>
   <div class="row" style="">
     <div class="col-md-12">    
-      <div class="align-middle" style="float:left; width:400px; margin-left:20px; margin-right:20px; ">
+      <div class="align-middle" style="float:left; max-width:400px; margin-left:20px; margin-right:20px; ">
           <h1>Our Responsibility</h1><br>
           <br>
           <p>We believe poor design is responsible for the great damage inflicted upon the natural capital on which all life depends on, including ours and that of our children.</p>

@@ -2,8 +2,8 @@
 <div class="container">        
     <div class="row" class="container">
         <div class="col-md-12">    
-            <img src="{{ asset('images/backlit.jpg') }}" class="img-responsive" style="float:left; width:400px; border-radius: 10%;" alt="Image">
-        <div  style="float:left; margin-left:35px; width:400px; margin-right:20px;">
+            <img src="{{ asset('images/backlit.jpg') }}" class="img-responsive" style="margin:10px;float:left;width:400px; border-radius: 10%;" alt="Image">
+        <div  style="float:left; margin-left:35px; max-width:400px; margin-right:20px;">
         <h1>Designing and Implementing!</h1><br>
         <p class="lead">Below you can find the technologies we work in whether designing from scratch or not.</p>
         <p>Please note this list is not exhaustive and only includes some of the most common options.</p>

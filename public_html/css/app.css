@@ -10438,6 +10438,16 @@ footer {
   background-color: #e7e3e3;
 }
 
+@media only screen and (max-width: 768px) {
+  #header {
+    background-attachment: initial !important;
+  }
+
+  #header .bottom-header h2 {
+    font-size: 66px;
+  }
+}
+
 .loader {
   background: rgba(245, 245, 245, 0.85);
   position: absolute;
