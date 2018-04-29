@@ -19,3 +19,7 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/home', 'PagesController@home')->name('home');
+Route::post('contact', 'PagesController@postContact');
+Route::get('/contact', function () {
+    return view('pages.index');
+});
