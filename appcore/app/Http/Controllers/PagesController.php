@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use Mail;
 
 class PagesController extends Controller
 {
@@ -18,5 +19,22 @@ class PagesController extends Controller
         */
         return view('pages.home')->with('alert-dismissible', 'success');
     }
+    public function postContact(Request $request) {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'subject' => 'min:10',
+            'message' => 'min: 10']);
+            $data = array(
+                            'email' => $request->email,
+                            'subject' => $request->subject,
+                            'bodyMessage' => $request->message
+                        );
+            Mail::send('emails.contactmail', $data, function($message) use ($data){
+                $message->from('no-reply@seabuckthornmedia.com');
+                $message->to('info@seabuckthornmedia.com');
+                $message->subject($data['subject']);
+                });
+                return view('pages.home', ['msg' => 'success']);
 
+   }
 }
