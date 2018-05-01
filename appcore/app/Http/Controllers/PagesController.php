@@ -34,7 +34,7 @@ class PagesController extends Controller
                 $message->to('info@seabuckthornmedia.com');
                 $message->subject($data['subject']);
                 });
-                return view('pages.home', ['msg' => 'success']);
+                return redirect('/')->with('success', 'Message Sent!');
 
    }
 }
