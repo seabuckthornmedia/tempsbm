@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['welcome', 'success']]);
+      //  $this->middleware('auth', ['except' => ['welcome', 'success']]);
     }
     public function home()
     {
